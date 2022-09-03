@@ -1,0 +1,18 @@
+<h2> Modifica tu elección</h2>
+
+<form action="/restaurants/<%= @restaurant.id %>" method = "post">
+<input type="hidden" name= "_method" value="patch">
+  <label for="name">Nombre</label>
+  <input type="text" id="name" name ="name" value="<%= @restaurant.name %>">
+
+  <label for="city">Ciudad</label>
+  <input type="text" id="city" name ="city" value="<%= @restaurant.city %>">
+
+  <label for="address">Dirección</label>
+  <input type="text" id="address" name ="address" value="<%= @restaurant.address %>">
+
+  <label for="image_url">Url</label>
+  <input type="text" id="image_url" name ="image_url" value="<%= @restaurant.image_url %>">
+
+  <button type="submit">Guardar</button>
+</form>

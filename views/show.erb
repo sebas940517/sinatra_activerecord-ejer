@@ -1,0 +1,13 @@
+<div>
+  <h2 class="title">
+    <%= @restaurant.name %>
+  </h2>
+    <p><%= @restaurant.city%> <%= @restaurant.address%></p>
+</div>
+
+<a href="/restaurants/<%= @restaurant.id %>/edit" class= "btn btn-danger">Editar</a>
+
+<form action="/restaurants/<%= @restaurant.id %>" method= 'post'>
+<input type="hidden" name="_method" value="delete">
+<input type="subimt" value="borrar">
+</form>
